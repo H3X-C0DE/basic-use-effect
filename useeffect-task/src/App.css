@@ -45,6 +45,24 @@ button {
   text-transform: uppercase;
   border: none;
   border-radius: 5px;
+  margin: 0.5em;
+}
+div .add {
+  background-color: yellowgreen;
+  position: relative;
+}
+div .remove {
+  background-color: tomato;
+  position: relative;
+}
+.add:hover,
+.remove:hover {
+  transition: all 0.2s;
+  opacity: 75%;
+}
+.add:active,
+.remove:active {
+  top: 2px;
 }
 .App-header {
   background-color: #282c34;

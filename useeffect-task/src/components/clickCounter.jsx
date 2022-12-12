@@ -11,13 +11,21 @@ const ClickCounter = () => {
   const handleClick = () => {
     setCount((count) => count + 1);
   };
+  const handleClick2 = () => {
+    setCount((count) => count - 1);
+  };
   useEffect(() => {
     localStorage.setItem("clickCounter", count);
   }, [count]);
   return (
     <div>
       <h2>{count}</h2>
-      <button onClick={handleClick}>Click Me!</button>
+      <button className="remove" onClick={handleClick2}>
+        Remove -
+      </button>
+      <button className="add" onClick={handleClick}>
+        Add +
+      </button>
     </div>
   );
 };
